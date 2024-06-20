@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            display: none;
+        }
+      
+        #video {
+            width: 420px;
+            height: 340px;
+        }
+       .content {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+       }
+        
+
+        @media only screen and (max-width: 600px) {
+           .main {
+            width: 100vw;
+           }
+           
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div>
+        <div class="content">
+        <div class="division">
+        <div>
+            <h1 >Upload an Image</h1>
+        </div>
+        <div>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="file">
+                <input type="submit" value="Upload">
+            </form>
+        </div>
+        {% if date or amountnumber or wordamount or name %}
+        <h2>Extracted Information</h2>
+        <p><strong>Date:</strong> {{ date }}</p>
+        <p><strong>Amount in Numbers:</strong> {{ amountnumber }}</p>
+        <p><strong>Amount in Words:</strong> {{ wordamount }}</p>
+        <p><strong>Name:</strong> {{ name }}</p>
+    {% endif %}
+       </div>
+      
+      
+       </div>
+       
+ 
+  
+   
+   
+  </div>
+</body>
+</html>

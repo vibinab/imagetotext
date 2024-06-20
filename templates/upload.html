@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #video {
+            height: 340px;
+            width: 240px;
+        } 
+        #canvas {
+                display: none;
+             }
+       
+        @media only screen and (max-width: 600px) {
+            #video {
+                height: 140px;
+                width: 200px;
+             }
+             #canvas {
+                display: none;
+             }
+
+          }
+    </style>
+</head>
+<body>
+    <div class="division">
+        <h1>Web Capture</h1>
+        <video id="video" autoplay></video>
+        <button id="snap">Capture</button> 
+        <canvas id="canvas"></canvas>
+        <script src="../static/script.js"></script>
+
+       </div>
+       <div>
+       
+        <h2>Extracted Information</h2>
+        <p><strong>Date:</strong> <span id="name"></span></p>
+        <p><strong>Amount in Numbers:</strong> <span id="date"></span></p>
+        <p><strong>Amount in Words:</strong>  <span id="wordamount"></span</p>
+        <p><strong>Name:</strong><span id="digitamount"></span></p>
+
+        <p>{{data}}</p>
+    </div>
+</body>
+</html>
