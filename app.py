@@ -3,9 +3,9 @@ import os
 import io
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
-# app.config['GOOGLE_APPLICATION_CREDENTIALS']=r"./fresh-park-426004-b1-d3fd28f9f7ed.json"
+app.config['GOOGLE_APPLICATION_CREDENTIALS']=r"./fresh-park-426004-b1-d3fd28f9f7ed.json"
 # os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = app.config['GOOGLE_APPLICATION_CREDENTIALS']
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+# os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
 
 import base64 
 from google.cloud import vision
